@@ -26,7 +26,7 @@ class Starship extends Component {
   render() {
     const paradas = this.calcParadas(this.props.starship.consumables, this.props.starship.MGLT, this.props.distancia);
     return (
-      <li key={this.props.index} className="list-group-item col-5">
+      <li key={this.props.index} className="list-group-item col-xs-12 col-sm-5">
         {this.props.starship.name}  <span className="float-right" >{paradas}</span>
       </li>
     );

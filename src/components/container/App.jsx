@@ -22,7 +22,7 @@ class App extends Component {
         </div>
 
         <div className="input-group row">
-          <div className="pb-4 col-5">
+          <div className="pb-4 col-xs-12 col-sm-5">
             <label>Distância a ser percorrida, em mega lights (MGLT): </label>
             <input type="number" className="form-control" min="1" value={this.state.distancia} name="distancia" onChange={this.handlerDistancia} /> 
           </div>
