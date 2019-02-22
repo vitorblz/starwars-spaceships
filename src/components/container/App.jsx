@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import Starship from '../presentational/Starship.jsx';
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 

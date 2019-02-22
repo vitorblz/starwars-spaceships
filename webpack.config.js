@@ -1,9 +1,12 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+
 module.exports = {
   watch: true,
   entry: "./src/index.js",
   output: {
-    filename: 'bundle.js',
-    path: __dirname + '/docs'
+    path: path.resolve(__dirname, './docs'),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -14,10 +17,14 @@ module.exports = {
           loader: "babel-loader"
         }
       },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+        hash: true,
+        title: 'Star wars spaceships',
+        template: './src/index.html',
+        filename: './index.html' 
+    })
+  ]
 };
