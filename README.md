@@ -22,6 +22,7 @@ yarn;
 ```
 cd starwars-spaceships;
 yarn; 
+```
 
 4. Build para produção
 ```
