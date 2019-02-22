@@ -23,7 +23,7 @@ module.exports = {
     new HtmlWebpackPlugin({
         hash: true,
         title: 'Star wars spaceships',
-        favicon: './assets/favicon.ico',
+        favicon: './src/assets/favicon.png',
         template: './src/index.html',
         filename: './index.html' 
     })
