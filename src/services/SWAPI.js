@@ -1,13 +1,13 @@
-
 const uri = 'https://swapi.co/api/';
-
 
 export default class SWAPI{
 
-  static getStarships()
+  static getStarships(page=1)
   {
-    return fetch(`${uri}starships/?format=json`)
-      .then(response => response.json())
+    const arrayStarships = []
+    
+    return fetch(`${uri}starships/?format=json&page=${page}`)
+      .then(response => { console.log(response); return response.json(); })
       .then(starships => starships)
       .catch(error => {
         console.log(error);
